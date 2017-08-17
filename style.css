@@ -1,21 +1,49 @@
+#separacao_topo{
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: #5d33fd;
+}
 .alignleft{float:left;}
 .alignright{float:right;}
 .aligncenter {display: block; margin-left: auto; margin-right: auto}
 img{margin: 5px;}
+/***********************/
 
+
+
+
+
+/**********/
+.menu_topo{
+    border: 2px solid #00ff6f;
+    align-content: left;
+    float: left;
+    display: block;
+}
+.menu_topo ul{margin: 0; padding: 0;}
+.menu_topo ul li{
+    float: left;
+    padding: 5px;
+    background-color: #250e0e;
+    margin: 3px;
+    list-style: none;
+}
+/**********/
 
 
 .home{
-    margin: 3px;
-    padding: 5px;
+    margin-bottom: 1px;
+    padding-bottom: 25px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 10px;
 }
 
-.home > h1,.home > h2, .home > h3{
+.home img{border-radius: 4px;}
+
+.home h1,.home h2, .home h3{
     display: block; margin-left: auto; margin-right: auto;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 footer{
