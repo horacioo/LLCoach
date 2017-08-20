@@ -14,6 +14,11 @@ img{margin: 5px;}
 /***********************/
 
 
+
+.conteudo{
+    background-color: white;
+}
+
 .custom-logo{border: 0px solid red;
 width: 99%;
 height: auto;
@@ -27,7 +32,7 @@ height: auto;
     padding-bottom: 25px;
     padding-left: 10px;
     padding-right: 10px;
-    z-index: -1;
+    
 }
 
 .home img{border-radius: 4px;}
