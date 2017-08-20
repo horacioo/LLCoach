@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+body{font-family: 'Karla', sans-serif; }
+
 #separacao_topo{
     margin-top: 2px;
     margin-bottom: 5px;
@@ -15,36 +19,7 @@ width: 99%;
 height: auto;
 }
 
-/**********/
-.navbar-nav > li > a {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-weight: bold;
-}
-.nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: none;
-    background-color: transparent;
-}
-/**********/
-.menu_topo{
-    border: 0px solid #00ff6f;
-    align-content: left;
-    float: left;
-    display: block;
-    margin-top: 15px;
-}
-.menu_topo ul{margin: 0; padding: 0;}
-.menu_topo ul li{
-    float: left;
-    padding: 3px;
-    margin: 3px;
-    list-style: none;
-    border-right: 1px solid red;
-}
-.menu_topo ul li:hover{
-     /*border-bottom: 1px solid red;*/
-}
-/**********/
+
 
 
 .home{
@@ -52,6 +27,7 @@ height: auto;
     padding-bottom: 25px;
     padding-left: 10px;
     padding-right: 10px;
+    z-index: -1;
 }
 
 .home img{border-radius: 4px;}
@@ -67,3 +43,5 @@ footer{
     height: 200px;
     background-color: black;
 }
+
+

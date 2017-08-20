@@ -88,6 +88,7 @@ add_filter("mce_buttons", "enable_more_buttons");
 require_once 'includes/custom_post_home_page.php';
 require_once 'includes/metaBoxe_cor.php';
 require_once 'includes/custom_post_anuncios.php';
+require_once 'includes/metaBoxeShortCode.php';
 require_once 'includes/shortcode.php';
 /*****************************************************************/
 
