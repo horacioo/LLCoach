@@ -26,7 +26,7 @@
 
 
     <body <?php body_class(); ?>>
-        <div class="container"> 
+        <div class="container-fluid"> 
             <div class="row">
                 <div class="col-xs-12 col-sm-2 logotipoTopo"><?php Logotipo() /* echo bloginfo(title); */ ?></div>
                 <div class="col-xs-12 col-sm-12 col-lg-8 "><?php get_template_part('template_part/menu') ?></div>

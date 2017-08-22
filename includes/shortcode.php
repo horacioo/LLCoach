@@ -10,3 +10,14 @@ function anuncio($atts, $content = "") {
     $retorno .= "</div>";
     return "$retorno";
 }
+/* o flip está no arquivo css
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<!-- front content -->
+		</div>
+		<div class="back">
+			<!-- back content -->
+		</div>
+	</div>
+</div> */

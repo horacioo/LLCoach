@@ -90,12 +90,44 @@ require_once 'includes/metaBoxe_cor.php';
 require_once 'includes/custom_post_anuncios.php';
 require_once 'includes/metaBoxeShortCode.php';
 require_once 'includes/shortcode.php';
-/*****************************************************************/
+/* * ************************************************************** */
 
 register_sidebar(array(
- "name" => "index_rodape",
- "description" => "barra de conteudo para usar no rodape da esquerda",
- "id" => "rodape",
- "before_widget" => "<div class='conteudo_rodape'>",
- "after_widget" => "</div>",
+    "name" => "index_rodape",
+    "description" => "barra de conteudo para usar no rodape da esquerda",
+    "id" => "rodape",
+    "before_widget" => "<div class='conteudo_rodape'>",
+    "after_widget" => "</div>",
 ));
+
+
+register_sidebar(array(
+    "name" => "anuncios_direita",
+    "description" => "barra de conteúdo para aparecer no conteúdo da direita",
+    "id" => "direita",
+    "before_widget" => "<div class='conteudo_direita'>",
+    "after_widget" => "</div>",
+));
+
+
+register_sidebar(array(
+    "name" => "Anuncios_esquerda",
+    "description" => "barra de conteúdo para aparecer no conteúdo da esquerda",
+    "id" => "esquerda",
+    "before_widget" => "<div class='conteudo_direita'>",
+    "after_widget" => "</div>",
+));
+
+
+function Thumb() {
+    if (has_post_thumbnail()) { ?>
+            <div class="col-lg-12 topo_conteudo" >
+            <?php
+                echo the_post_thumbnail($size = "large");
+                echo"<center><h2>"; echo the_title(); echo"</h2></center>";
+                echo"</div>";
+            } else { ?>
+                <?php echo"<center><h2>"; echo the_title(); echo"</h2></center>";?>
+            <?php }
+    }
+    
