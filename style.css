@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Karla');
-
-
+/*
 -webkit-transition: all 300ms ease;
 -moz-transition: all 300ms ease;
 -ms-transition: all 300ms ease;
 -o-transition: all 300ms ease;
 transition: all 300ms ease;
+*/
 
 
+@import url('https://fonts.googleapis.com/css?family=Karla|Raleway');
+
+html{ font-family: 'Karla', sans-serif;}
+h1,h2,h3{font-family: 'Raleway', sans-serif;}
+
+.anuncios{
+    float: left;
+    margin-right: 2%;
+    MARGIN-LEFT: 2%;
+    width: 20%;
+}
 
 body{font-family: 'Karla', sans-serif; }
 
@@ -149,5 +159,13 @@ footer{
         padding-right: 15px;
     }*/
     .topo_conteudo h1,.topo_conteudo h2, .topo_conteudo h2{font-size: 21px;}  
-
+    .anuncios{width: 100%;}
+    .home{
+        position: relative;
+        overflow: auto;
+        height: auto;
+    }
+    .back,.front{
+        width: 99!important%;
+    }
 }

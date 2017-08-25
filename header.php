@@ -18,8 +18,10 @@
         <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
         <link href="<?php echo $url_tema; ?>/css/menu.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $url_tema; ?>/css/flip.css" rel="stylesheet" type="text/css">
         <script src="<?php echo $url_tema; ?>/js/menu.js"></script>
-
+        <script src="<?php echo $url_tema; ?>/js/video.js"></script>
+        
 
     </head>
     <header class="p1_header"></header>
