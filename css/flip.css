@@ -37,14 +37,14 @@ box-shadow: 3px 12px 23px 4px #1C1C1C;
 
 .front {
     z-index: 2;
-    background-color: #ffcb55;
+    /*background-color: #ffcb55;*/
     padding: 10%;
     transform: rotateY(0deg);
 }
 
 .back {
     transform: rotateY(180deg);
-    background-color: #00A8EF;
+    /*background-color: #00A8EF;*/
     padding: 5%;
 }
 

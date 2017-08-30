@@ -4,30 +4,44 @@ add_shortcode("anuncios", anuncio);
 
 function anuncio($atts, $content = "") {
     $post = get_post($atts['id']);
+    /*     * ******************* */
+    /*     * ******************* */
+    /*     * ******************* */
+    $cor1 = get_post_meta($atts['id'], "cor1");
+    $cor2 = get_post_meta($atts['id'], "cor2");
+    $cor3 = get_post_meta($atts['id'], "cor3");
+    $cor4 = get_post_meta($atts['id'], "cor4");
+    $cor5 = get_post_meta($atts['id'], "cor5");
+    /*     * ******************* */
+    /*     * ******************* */
+    /*     * ******************* */
+    ?>
+
+    <?php
+    $link = get_permalink($atts['id']);
     $thumb = get_the_post_thumbnail($atts['id'], 'thumbnail');
-    
     $retorno = "<div class='anuncios'>";
-    $retorno.=" <div class = \"flip-container\" ontouchstart = \"this.classList.toggle('hover');\">";
-    $retorno.=" <div class = \"flipper\">";
-    $retorno.=" <div class = \"front\">";
-    $retorno.="$thumb";
-    $retorno.="<h3>".$post->post_title."</h3>";
-    $retorno.=" </div>";
-    $retorno.=" <div class = \"back\">";
-    $retorno.="<h3>".$post->post_title."</h3>";
-    $retorno.="<br>";
-    $retorno.=$post->post_excerpt;
-    $retorno.="<br>";
-    $retorno.="<a href='#' class='btn_back'>acessar</a>";
-    $retorno.=" </div>";
-    $retorno.=" </div>";
-    $retorno.=" </div>";
-    $retorno.= "</div>";
+    $retorno .= " <div class = \"flip-container\" ontouchstart = \"this.classList.toggle('hover');\">";
+    $retorno .= " <div class = \"flipper\">";
+    $retorno .= " <div class = \"front\"  style='background-color:" . $cor1[0] . "!important; color:" . $cor2[0] . "!important;'    >";
+    $retorno .= "$thumb";
+    $retorno .= "<h3>" . $post->post_title . " </h3>";
+    $retorno .= " </div>";
+    $retorno .= " <div class = \"back\"   style='background-color:" . $cor3[0] . "!important; color:" . $cor4[0] . "!important;'  >";
+    $retorno .= "<h3>" . $post->post_title . " </h3>";
+    $retorno .= "<br>";
+    $retorno .= $post->post_excerpt;
+    $retorno .= "<br>";
+    $retorno .= "<a href='$link' class='btn_back btn' style='background-color:" . $cor5[0] . "!important;'>acessar</a>";
+    $retorno .= " </div>";
+    $retorno .= " </div>";
+    $retorno .= " </div>";
+    $retorno .= "</div>";
     return $retorno;
 }
 
-
 add_shortcode("video", "abreVideo");
+
 function abreVideo($atts, $content = "") {
     if (isset($atts['link'])) {
         $link = $atts['link'];
