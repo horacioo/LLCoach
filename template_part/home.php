@@ -23,8 +23,10 @@ foreach ($my_posts as $post): setup_postdata($post);
     <div class="row">
 
         <div id="<?php echo get_the_title(); ?>" class="col-lg-12 home informacao_<?php echo $post->ID; ?>">
-            <h2 style="color: <?php echo $dados['colortit'][0] ?>"><?php echo get_the_title(); ?></h2>
-            <?php echo the_content(); ?>
+            <div>
+                <p><h2 style="color: <?php echo $dados['colortit'][0] ?>"><?php echo get_the_title(); ?></h2></p>
+                <?php echo the_content(); ?>
+            </div>
         </div>
 
     </div>

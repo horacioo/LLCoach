@@ -8,15 +8,24 @@ transition: all 300ms ease;
 
 
 @import url('https://fonts.googleapis.com/css?family=Karla|Raleway');
-
+li{list-style: none;}
 html{ font-family: 'Karla', sans-serif;}
-h1,h2,h3{font-family: 'Raleway', sans-serif;}
+h1,h2,h3{font-family: 'Raleway', sans-serif; text-transform: capitalize;}
+
+.navbar-default {
+    font-size: 18px!important;
+    font-style: italic!important;
+    line-height: 18px!important;
+    font-weight: normal!important;
+    font-family: 'Karla', sans-serif;
+}
+
 
 .anuncios{
     float: left;
     margin-right: 2%;
     MARGIN-LEFT: 2%;
-    width: 20%;
+    width: 21%;
 }
 
 body{font-family: 'Karla', sans-serif; }
@@ -44,11 +53,12 @@ img{margin: 5px;}
 }
 
 .home{
-    margin-bottom: 1px;
+    margin-bottom: 0px;
     padding-bottom: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 19px!important;
+    line-height: 32px!important;
 }
 
 .home img{border-radius: 4px;}
@@ -57,8 +67,12 @@ img{margin: 5px;}
     display: block; margin-left: auto; margin-right: auto;
     font-weight: bold;
     text-transform: capitalize;
+    align-content: center;
+    /*font-size: 56px;
+    line-height: 56px;*/
 }
 
+.home > div{padding: 16px;}
 
 /***********************************/
 .topo_conteudo{
@@ -147,9 +161,18 @@ transform: rotate(4deg) translateX(-12px) skewX(0deg);
 /************************************/
 footer{
     margin-top: 50px;
-    height: 200px;
+    min-height: 200px;
+    height: auto;
+    overflow: auto;
     background-color: black;
+    padding: 15px;
+    color: white;
 }
+
+footer a{
+    color: white;
+}
+
 
 @media screen and (max-width: 768px){
     /*.container-fluid {
@@ -166,6 +189,6 @@ footer{
         height: auto;
     }
     .back,.front{
-        width: 99!important%;
+        width: 99!important;
     }
 }

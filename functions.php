@@ -10,7 +10,7 @@ add_theme_support('title-tag');
 add_theme_support('custom-background', array('default-color' => 'white'));
 add_theme_support('custom-logo', array('height' => 90, 'width' => 90, 'flex-width' => true,));
 add_filter('show_admin_bar', '__return_false');
-register_nav_menu('menu_principal', 'Menu Principal - Topo');
+register_nav_menu('menu_principal', 'Topo');
 
 
 /* * **** */
@@ -96,7 +96,7 @@ register_sidebar(array(
     "name" => "index_rodape",
     "description" => "barra de conteudo para usar no rodape da esquerda",
     "id" => "rodape",
-    "before_widget" => "<div class='conteudo_rodape'>",
+    "before_widget" => "<div class='conteudo_rodape col-md-3'>",
     "after_widget" => "</div>",
 ));
 
@@ -119,6 +119,17 @@ register_sidebar(array(
 ));
 
 
+
+
+register_sidebar(array(
+    "name" => "topo",
+    "description" => "barra de conteúdo para aparecer no topo da home",
+    "id" => "topo",
+    "before_widget" => "<div class='conteudo_direita'>",
+    "after_widget" => "</div>",
+));
+
+
 function Thumb() {
     if (has_post_thumbnail()) { ?>
             <div class="col-lg-12 topo_conteudo" >
@@ -131,3 +142,70 @@ function Thumb() {
             <?php }
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    function EnviaEmail(){
+      
+            if(isset($_POST['curso'])){
+                $email = "";
+                $chaves = array_keys($_POST['curso']);
+                foreach ($chaves as $ch):
+                    $resposta = strip_tags($_POST['curso'][$ch]);
+                    $email.="<hr>$ch = ".$resposta;
+                endforeach;
+                /*****************************************************/
+                    $to = 'lanterna_@hotmail.com';
+                    $subject = 'cursos';
+                    $body = $email;
+                    $headers = array('Content-Type: text/html; charset=UTF-8');
+                    wp_mail( $to, $subject, $body, $headers );
+                    //$headers = 'From: My Name <myname@example.com>' . "\r\n";
+                    //wp_mail( 'test@example.org', 'subject', 'message', $headers, $attachments );
+                /*****************************************************/
+            }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    function Cursos_Lista() {
+    global $post;
+    $args = array('post_type' => 'anuncios');
+    $myposts = get_posts($args);
+    $saida="";
+         
+        foreach ($myposts as $post) : setup_postdata($post);
+            if(!isset($atts['saida'])){ $saida.="<li><a href='". get_permalink()."'>"; $saida.= get_the_title(); $saida.="</a></li>";}
+        endforeach;
+        
+    if(!isset($atts['saida'])){$saida.="</ul>";}
+    if(isset($atts['saida'])){if($atts['saida']="form"){  $saida.="</select>";  }}
+    
+    wp_reset_postdata();
+    return $saida;
+    }
