@@ -8,4 +8,5 @@
 </div>
 
 <?php get_template_part("template_part/home"); ?>
+<?php dynamic_sidebar('parte_de_baixo');?>
 <?php get_footer(); ?>

@@ -130,6 +130,16 @@ register_sidebar(array(
 ));
 
 
+
+register_sidebar(array(
+    "name" => "parte_de_baixo",
+    "description" => "barra de conteúdo para aparecer na parte de baixo do layout",
+    "id" => "baixo",
+    "before_widget" => "<div class='col-lg-12'>",
+    "after_widget" => "</div>",
+));
+
+
 function Thumb() {
     if (has_post_thumbnail()) { ?>
             <div class="col-lg-12 topo_conteudo" >

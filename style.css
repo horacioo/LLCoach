@@ -21,6 +21,7 @@ h1,h2,h3{font-family: 'Raleway', sans-serif; text-transform: capitalize;}
 }
 
 
+
 .anuncios{
     float: left;
     margin-right: 2%;
@@ -104,6 +105,8 @@ img{margin: 5px;}
 }
 /***********************************/
 
+
+/***********************************/
 .conteudo_page_post{
     background-color: white;
     height: auto;
@@ -174,6 +177,8 @@ footer a{
 }
 
 
+
+
 @media screen and (max-width: 768px){
     /*.container-fluid {
         margin-right: auto;
@@ -191,4 +196,14 @@ footer a{
     .back,.front{
         width: 99!important;
     }
+}
+
+.selo{
+    width: 25px;
+    height: auto;
+    position: fixed;
+    right: 1px;
+    bottom: 0;
+    border-radius: 0px!important;
+    z-index: 2;
 }
