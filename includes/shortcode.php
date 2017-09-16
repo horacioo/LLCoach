@@ -31,7 +31,7 @@ function anuncio($atts, $content = "") {
     $retorno .= "<br>";
     $retorno .= $post->post_excerpt;
     $retorno .= "<br>";
-    $retorno .= "<a href='$link' class='btn_back btn' style='background-color:" . $cor5[0] . "!important;'>acessar</a>";
+    $retorno .= "<a href='$link' rel='nofollow' class='btn_back btn' style='background-color:" . $cor5[0] . "!important;'>acessar</a>";
     $retorno .= " </div>";
     $retorno .= " </div>";
     $retorno .= " </div>";

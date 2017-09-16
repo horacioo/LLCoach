@@ -2,7 +2,7 @@
 <div class="row">
     <div class="container-fluid conteudo_page_post ">
 
-        <div class="col-lg-5">
+        <!--<div class="col-lg-5">
             <form action="" method="post" name="curso">
                 <input type='hidden' name=curso[curso] value="<?php get_the_title() ?>" >
                 <div><label>qual seu nome*</label><input type="text" name=curso[nome] required="required" class="form-control"></div>
@@ -21,8 +21,8 @@
                 <br>
                 <div><input type="submit" value="Contratar" class="btn btn-large btn-success"></div>
             </form>
-        </div>
-        <div class="col-lg-7">
+        </div>-->
+        <div class="col-lg-12">
             <?php
             while (have_posts()) : the_post();
                 $id = get_the_ID();

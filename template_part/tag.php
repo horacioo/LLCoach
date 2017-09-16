@@ -13,7 +13,7 @@ $tagx = (array) $tag[0];
             $thumb = get_the_post_thumbnail($id, $size = 'medium'); //
             echo"<li class='lista_links_tag'>";
             echo"<div class='thumb'>" . $thumb . "</div>";
-            echo"<div class='nome_link '><a href='" . get_permalink() . "'><h2>" . get_the_title() . "</h2></a></div>";
+            echo"<div class='nome_link '><a href='" . get_permalink() . "'  rel='nofollow' ><h2>" . get_the_title() . "</h2></a></div>";
             echo"<div class='texto'>";
             the_excerpt();
             echo"</div>";

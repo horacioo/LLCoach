@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="google-site-verification" content="czvzJf8kd1DmBGD4juoyCG_2IuuIfwqSia1gj417mik" />
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -21,7 +23,17 @@
         <link href="<?php echo $url_tema; ?>/css/flip.css" rel="stylesheet" type="text/css">
         <script src="<?php echo $url_tema; ?>/js/menu.js"></script>
         <script src="<?php echo $url_tema; ?>/js/video.js"></script>
-        
+
+        <?php
+        $configuracoes = get_option('CorMenu');
+        if ($configuracoes['normal'] != $configuracoes['over']):
+            ?>
+            <style>
+                .navbar-default a{color:<?php echo $configuracoes['normal'] ?>!important;}
+                .navbar-default a:hover{color:<?php echo $configuracoes['over'] ?>!important;}
+                .sub-menu{background-color: <?php echo $configuracoes['fundao'] ?>!important;}
+            </style>
+        <?php endif; ?>
 
     </head>
     <header class="p1_header"></header>
@@ -30,7 +42,9 @@
     <body <?php body_class(); ?>>
         <div class="container-fluid"> 
             <div class="row">
-                <div class="col-xs-12 col-sm-2 logotipoTopo"><?php Logotipo() /* echo bloginfo(title); */ ?></div>
+                <div class="col-xs-12 col-sm-2 col-lg-2 logotipoTopo"><?php Logotipo() /* echo bloginfo(title); */ ?></div>
                 <div class="col-xs-12 col-sm-12 col-lg-8 "><?php get_template_part('template_part/menu') ?></div>
-                <div class="col-xs-12 col-sm-2  col-lg-2 baixo">redes sociais</div>
+                <div class="col-xs-12 col-sm-2  col-lg-2 baixo">
+                    <?php dynamic_sidebar("topo_direita");  ?>
+                </div>
             </div>
